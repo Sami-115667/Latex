@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+
+\setcounter{secnumdepth}{4}
+
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{float} % Add this package for the [H] option
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage{minted}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+     \begin{Huge}
+            \textsc{Networking Project Proposal}\par \vspace{0.5cm}
+        \end{Huge}
+        \includegraphics[scale=0.10]{du.png}\par\vspace{0.5cm}
+        \begin{Huge}
+            \textsc{CSE 3101 - Computer Networking}\par\vspace{1cm}{Project Title:\par\vspace{0.3cm} Group-Chatting}
+        \end{Huge}
+        \begin{Large}
+            
+        \end{Large}
+    \end{center}     
+    \begin{large}
+        \textbf{Submitted By:\\[5pt]}
+            Name: Md Shamsur Rahman Sami\\[5pt]
+            Roll No : 57\\[7pt]
+            Name: Md Rakib Hossain\\[5pt]
+            Roll No : 55\\[12pt]
+        \textbf{Submitted On : \\[5pt]}
+            April 16, 2024\\[20pt]
+        \textbf{Submitted To :\\[8pt]}
+            Dr. Md. Abdur Razzaque\\
+            Redwan Ahmed Rizvee
+    \end{large}
+\end{titlepage}
+
+
+\tableofcontents  
+\newpage
+
+
+\section{Objectives \& Motivation}
+The objective of this project is to create a multi-client chat application that allows multiple clients to connect to a server and communicate with each other in real-time. Additionally, the project aims to incorporate a file-sharing feature, enabling users to share files such as PDFs, images, or other documents. The motivation behind this project is to demonstrate proficiency in networking concepts, multi-threading, inter-process communication, and file handling while building a practical and useful application.
+
+\section{Technology to be Used}
+\begin{itemize}
+    \item Language: Python
+    \item Framework: None (will utilize Python's built-in socket library for networking)
+    \item Additional Libraries: None (to keep the project simple and focused)
+\end{itemize}
+
+\section{Features to be Built}
+\begin{enumerate}
+    \item \textbf{Server Class}:
+    \begin{itemize}
+        \item Listens for incoming client connections
+        \item Creates a new thread for each connected client
+        \item Handles client disconnections gracefully
+    \end{itemize}
+    
+    \item \textbf{ClientHandler Class}:
+    \begin{itemize}
+        \item Handles each client connection
+        \item Reads messages from the client
+        \item Broadcasts the messages to all connected clients
+        \item Manages client disconnections
+    \end{itemize}
+    
+    \item \textbf{Client Class}:
+    \begin{itemize}
+        \item Connects to the server
+        \item Sends messages to the server
+        \item Listens for messages from other clients
+        \item Handles user input and display of received messages
+        \item Supports file sharing: Allows users to send and receive files during the chat session
+    \end{itemize}
+\end{enumerate}
+
+\section{Networking Concepts to be Used}
+\begin{itemize}
+    \item Socket Programming: Utilizing TCP/IP sockets for communication between the server and clients.
+    \item Multi-Threading: Employing threads to handle multiple client connections simultaneously.
+    \item Client-Server Architecture: Implementing a client-server model for communication.
+\end{itemize}
+
+\section{Prospective Applications of the Project}
+\begin{enumerate}
+    \item Learning Tool: The project can serve as a learning resource for understanding socket programming, multi-threading, inter-process communication, file handling, and incorporating additional features like file sharing.
+    \item Collaboration Platform: The chat application can be expanded to support collaborative work environments where users can exchange messages and share files seamlessly.
+    \item Remote Support: With file-sharing capabilities, the application can be utilized for providing remote assistance and support services where real-time communication and sharing of documents are required.
+\end{enumerate}
+
+\end{document}
