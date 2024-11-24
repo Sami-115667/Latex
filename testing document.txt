@@ -1,0 +1,964 @@
+\documentclass[11pt]{article}
+
+\setcounter{secnumdepth}{4}
+
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{float} % Add this package for the [H] option
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage{minted}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+     \begin{Huge}
+            \textsc{Software Testing Document}\par \vspace{0.5cm}
+        \end{Huge}
+        \includegraphics[scale=0.10]{du.png}\par\vspace{0.5cm}
+        \begin{Huge}
+            \textsc{CSE3112: Software Engineering Lab}\par\vspace{1cm}{App Name\par\vspace{0.3cm} Swapno - An Ecommerce App}
+        \end{Huge}
+        \begin{Large}
+            
+        \end{Large}
+    \end{center}     
+    \begin{large}
+        \textbf{Submitted By:\\[5pt]}
+            Name: Md Shamsur Rahman Sami\\[5pt]
+            Roll No : 57\\[7pt]
+            Name: Md Rakib Hossain\\[5pt]
+            Roll No : 55\\[12pt]
+        \textbf{Submitted On : \\[5pt]}
+            May 12, 2024\\[20pt]
+        \textbf{Submitted To :\\[8pt]}
+            Dr. Saifuddin Md. Tareeq\\
+            Redwan Ahmed Rizvee
+    \end{large}
+\end{titlepage}
+\tableofcontents  
+\newpage
+\section{Unit Testing Results}
+{User Management Subsystem:}
+\begin{itemize}
+  \item \textbf{Test Result:} Passed
+  \item \textbf{Details:} All test cases related to user registration, login, authentication, and authorization functionalities were executed successfully. User creation, login, profile management, and password management functionalities were thoroughly tested and passed.
+\end{itemize}
+
+{Product Management Subsystem:}
+\begin{itemize}
+  \item \textbf{Test Result:} Passed
+  \item \textbf{Details:} The test cases for adding, editing, and deleting products were executed without errors. The subsystem successfully handled product management functionalities, ensuring accurate updates to the product catalog.
+\end{itemize}
+
+{Cart Management Subsystem:}
+\begin{itemize}
+  \item \textbf{Test Result:} Passed
+  \item \textbf{Details:} Test cases for adding products to the cart, updating cart quantities, and removing items from the cart were executed successfully. The subsystem effectively managed cart-related functionalities, providing a seamless shopping experience for users.
+\end{itemize}
+
+{Order Management Subsystem:}
+\begin{itemize}
+  \item \textbf{Test Result:} Passed
+  \item \textbf{Details:} The subsystem successfully handled order placement, order processing, and order tracking functionalities. Test cases related to placing orders, updating order statuses, and retrieving order details were executed without issues, ensuring efficient order management.
+\end{itemize}
+
+{Payment Management Subsystem:}
+\begin{itemize}
+  \item \textbf{Test Result:} Passed
+  \item \textbf{Details:} Test cases for processing payments, handling payment transactions securely, and generating payment invoices were executed successfully. The subsystem accurately managed payment-related functionalities, ensuring secure and reliable transactions.
+\end{itemize}
+
+\subsection{Static Testing}
+\subsubsection{Walkthrough}
+{User Management Subsystem}
+\begin{table}[H]
+\centering
+\caption{Static Testing Results for User Management Subsystem}
+\label{tab:user_management_static_testing}
+\begin{tabular}{|p{2.5cm}|p{9cm}|}
+\hline
+\textbf{Issue} & \textbf{Comments} \\ \hline
+Uninitialized Variables & No uninitialized variables found in the user management subsystem. All variables properly initialized and utilized according to the naming conventions. \\ \hline
+Undocumented Empty Block & No undocumented empty blocks detected. All blocks are appropriately commented, indented, and documented, enhancing code readability. \\ \hline
+No Effect Assignment & Optimized code to prevent redundant segments. Assignments meaningful and contribute to system functionality. \\ \hline
+Code Guideline Violation & Adhered to MVC pattern guidelines, ensuring a modular structure with component reusability. \\ \hline
+Code Anomalies & No significant anomalies detected. Secure JSON web token used for authentication and authorization. \\ \hline
+Structural Anomalies & Maintained structural modularity throughout the system, reducing errors and promoting maintainability. \\ \hline
+\end{tabular}
+\end{table}
+\newpage
+
+{Product Management Subsystem}
+\begin{table}[H]
+\centering
+\caption{Static Testing Results for Product Management Subsystem}
+\label{tab:product_management_static_testing}
+\begin{tabular}{|p{2.5cm}|p{9cm}|}
+\hline
+\textbf{Issue} & \textbf{Comments} \\ \hline
+Uninitialized Variables & No uninitialized variables found in the product management subsystem. All variables properly initialized and utilized according to the naming conventions. \\ \hline
+Undocumented Empty Block & No undocumented empty blocks detected. All blocks are appropriately commented, indented, and documented, enhancing code readability. \\ \hline
+No Effect Assignment & Optimized code to prevent redundant segments. Assignments meaningful and contribute to system functionality. \\ \hline
+Code Guideline Violation & Adhered to MVC pattern guidelines, ensuring a modular structure with component reusability. \\ \hline
+Code Anomalies & No significant anomalies detected. Efficient product management functionalities observed. \\ \hline
+Structural Anomalies & Structurally modular with easy error localization. Maintained code cleanliness and separation of concerns. \\ \hline
+\end{tabular}
+\end{table}
+\newpage
+
+{Cart Management Subsystem}
+\begin{table}[H]
+\centering
+\caption{Static Testing Results for Cart Management Subsystem}
+\label{tab:cart_management_static_testing}
+\begin{tabular}{|p{2.5cm}|p{9cm}|}
+\hline
+\textbf{Issue} & \textbf{Comments} \\ \hline
+Uninitialized Variables & No uninitialized variables found in the cart management subsystem. All variables properly initialized and utilized according to the naming conventions. \\ \hline
+Undocumented Empty Block & No undocumented empty blocks detected. All blocks are appropriately commented, indented, and documented, enhancing code readability. \\ \hline
+No Effect Assignment & Optimized code to prevent redundant segments. Assignments meaningful and contribute to system functionality. \\ \hline
+Code Guideline Violation & Adhered to coding guidelines and maintained the MVC pattern for a modular structure. \\ \hline
+Code Anomalies & Free from significant anomalies. Efficient cart management functionalities observed. \\ \hline
+Structural Anomalies & Structurally modular with easy error localization. Maintained code cleanliness and separation of concerns. \\ \hline
+\end{tabular}
+\end{table}
+\newpage
+{Order Management Subsystem}
+\begin{table}[H]
+\centering
+\caption{Static Testing Results for Order Management Subsystem}
+\label{tab:order_management_static_testing}
+\begin{tabular}{|p{2.5cm}|p{9cm}|}
+\hline
+\textbf{Issue} & \textbf{Comments} \\ \hline
+Uninitialized Variables & No uninitialized variables found in the order management subsystem. All variables properly initialized and utilized according to the naming conventions. \\ \hline
+Undocumented Empty Block & No undocumented empty blocks detected. All blocks are appropriately commented, indented, and documented, enhancing code readability. \\ \hline
+No Effect Assignment & Optimized code to prevent redundant segments. Assignments meaningful and contribute to system functionality. \\ \hline
+Code Guideline Violation & Adhered to coding guidelines and maintained the MVC pattern for a modular structure. \\ \hline
+Code Anomalies & Free from significant anomalies. Efficient order management functionalities observed. \\ \hline
+Structural Anomalies & Structurally modular with easy error localization. Maintained code cleanliness and separation of concerns. \\ \hline
+\end{tabular}
+\end{table}
+\newpage
+{Payment Management Subsystem}
+\begin{table}[H]
+\centering
+\caption{Static Testing Results for Payment Management Subsystem}
+\label{tab:payment_management_static_testing}
+\begin{tabular}{|p{2.5cm}|p{9cm}|}
+\hline
+\textbf{Issue} & \textbf{Comments} \\ \hline
+Uninitialized Variables & No uninitialized variables found in the payment management subsystem. All variables properly initialized and utilized according to the naming conventions. \\ \hline
+Undocumented Empty Block & No undocumented empty blocks detected. All blocks are appropriately commented, indented, and documented, enhancing code readability. \\ \hline
+No Effect Assignment & Optimized code to prevent redundant segments. Assignments meaningful and contribute to system functionality. \\ \hline
+Code Guideline Violation & Adhered to coding guidelines and maintained the MVC pattern for a modular structure. \\ \hline
+Code Anomalies & Free from significant anomalies. Payment process implemented accurately, including cash on delivery option. \\ \hline
+Structural Anomalies & Structurally modular with easy error localization. Maintained code cleanliness and separation of concerns. \\ \hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Code Review}
+\paragraph{Reviewer 1: Himel Roy:}
+
+Swapno, your ecommerce application, demonstrates a strong commitment to software engineering principles and best practices, resulting in a well-structured and maintainable codebase. The combination of Flutter for the user app, Java for the admin app, and Firebase as the backend database showcases a modern and robust technology stack, ensuring scalability, reliability, and efficiency.
+
+One notable aspect of your codebase is the effective implementation of the Model-View-Controller (MVC) architecture. This architectural pattern promotes code organization, separation of concerns, and maintainability, contributing to the overall quality and stability of your application.
+
+Furthermore, the strategic use of services within your application enhances modularity, extensibility, and code reuse. Services encapsulate complex business logic, enabling easier maintenance and testing while ensuring a clear separation of concerns. This architectural decision reflects a comprehensive understanding of software engineering principles and fosters a scalable and maintainable codebase.
+
+The choice of Firebase as the backend database solution is commendable, as it provides real-time data synchronization, robust security features, and scalability, which are essential for an ecommerce platform. The integration of Firebase enhances
+
+\paragraph{Reviewer 2: Sudipto Das Sukanto:}
+
+Swapno, your ecommerce application, showcases a well-implemented MVC architecture, leveraging the power of Flutter for the user app and Java for the admin app, with Firebase as the backend database. The codebase demonstrates a strong understanding of software engineering principles and follows best practices for maintainability and scalability.
+
+One notable aspect of your codebase is the effective use of services, which encapsulate complex business logic and promote code reuse. By employing services, the codebase achieves modularity and extensibility, ensuring a clear separation of concerns and enabling easier maintenance and testing.
+
+In summary, Swapno demonstrates a well-structured and maintainable architecture, leveraging modern technologies effectively. The emphasis on services and testing practices further enhances the codebase's quality and reliability. Great job in creating a scalable and robust ecommerce application!
+
+
+
+
+
+
+\newpage
+
+\subsection{Dynamic Testing}
+
+\subsubsection{Black Box Testing}
+
+The input-output module has been tested with several test cases:
+
+\paragraph{Range Partitioning}
+
+\subparagraph{SignUpPage:} Here is a table illustrating the test cases for the SignUpPage:
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.1.1 \\ \hline
+\textbf{Statement of Purpose} & To test the signup page functionality with different input scenarios. \\ \hline
+\textbf{Description of Preconditions} & The user is on the signup page. \\ \hline
+\textbf{Inputs} & Various combinations of valid and invalid email addresses, passwords, and other required fields. \\ \hline
+\textbf{Expected Outputs} & Successful signup with valid inputs; appropriate error messages for invalid inputs. \\ \hline
+\textbf{Description of Expected Post-conditions} & Upon successful signup, the user account is created. \\ \hline
+\textbf{Execution History} & The signup page handles different input scenarios correctly. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{LoginPage:} To test the login page functionality with different input scenarios.
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.1.2 \\ \hline
+\textbf{Statement of Purpose} & To test the login page functionality with different input scenarios. \\ \hline
+\textbf{Description of Preconditions} & The user is on the login page. \\ \hline
+\textbf{Inputs} & Various combinations of valid and invalid email addresses and passwords. \\ \hline
+\textbf{Expected Outputs} & Successful login with valid credentials; appropriate error messages for invalid credentials. \\ \hline
+\textbf{Description of Expected Post-conditions} & Upon successful login, the user is authenticated and redirected to the homepage. \\ \hline
+\textbf{Execution History} & The login page handles different input scenarios correctly. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{HomePage:} To test the functionality of the home page.
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.1.3 \\ \hline
+\textbf{Statement of Purpose} & To test the functionality of the home page. \\ \hline
+\textbf{Description of Preconditions} & The user is logged in and navigated to the home page. \\ \hline
+\textbf{Inputs} & User interactions with various elements on the home page such as navigation links, product categories, and search functionality. \\ \hline
+\textbf{Expected Outputs} & Proper rendering of the home page content, smooth navigation between sections, and accurate display of product listings. \\ \hline
+\textbf{Description of Expected Post-conditions} & The user can browse the home page seamlessly without encountering any errors. \\ \hline
+\textbf{Execution History} & The home page functions as expected during testing, providing a smooth user experience. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{CartPage:} To test the cart page functionality with different scenarios (e.g., adding items, updating quantities, removing items).
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.1.4 \\ \hline
+\textbf{Statement of Purpose} & To test the cart page functionality with different scenarios (e.g., adding items, updating quantities, removing items). \\ \hline
+\textbf{Description of Preconditions} & The user has added items to the cart. \\ \hline
+\textbf{Inputs} & Various actions such as adding items, updating quantities, and removing items from the cart. \\ \hline
+\textbf{Expected Outputs} & The cart page should display the updated list of items with correct quantities and prices. \\ \hline
+\textbf{Description of Expected Post-conditions} & The user can proceed to checkout or continue shopping. \\ \hline
+\textbf{Execution History} & The cart page updates correctly based on user actions. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{OrderPage:} To test the order page functionality for placing orders.
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.1.5 \\ \hline
+\textbf{Statement of Purpose} & To test the order page functionality for placing orders. \\ \hline
+\textbf{Description of Preconditions} & The user has items in the cart and is on the order page. \\ \hline
+\textbf{Inputs} & Various actions such as selecting delivery options, entering shipping details, and confirming the order. \\ \hline
+\textbf{Expected Outputs} & Successful order placement with valid inputs; appropriate error messages for invalid inputs. \\ \hline
+\textbf{Description of Expected Post-conditions} & Upon successful order placement, the user receives an order confirmation. \\ \hline
+\textbf{Execution History} & The order page handles different input scenarios correctly. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{PurchasePage:} To test the purchase page functionality for completing transactions.
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.1.6 \\ \hline
+\textbf{Statement of Purpose} & To test the purchase page functionality for completing transactions. \\ \hline
+\textbf{Description of Preconditions} & The user has placed an order and is on the purchase page. \\ \hline
+\textbf{Inputs} & Payment details such as credit card information, billing address, and security code. \\ \hline
+\textbf{Expected Outputs} & Successful transaction completion with valid payment details; appropriate error messages for invalid details. \\ \hline
+\textbf{Description of Expected Post-conditions} & Upon successful transaction, the user receives a payment confirmation. \\ \hline
+\textbf{Execution History} & The purchase page handles different payment scenarios correctly. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{ProfilePage:} To test the profile page functionality for viewing and updating user information.
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.1.7 \\ \hline
+\textbf{Statement of Purpose} & To test the profile page functionality for viewing and updating user information. \\ \hline
+\textbf{Description of Preconditions} & The user is logged in and navigates to the profile page. \\ \hline
+\textbf{Inputs} & User information such as name, email, contact details, and profile picture. \\ \hline
+\textbf{Expected Outputs} & Successful update of user information with valid inputs; appropriate error messages for invalid inputs. \\ \hline
+\textbf{Description of Expected Post-conditions} & The user profile reflects the updated information. \\ \hline
+\textbf{Execution History} & The profile page allows users to view and update their information correctly. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{ProductPage:} To test the product page functionality for viewing product details and adding items to the cart.
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.1.8 \\ \hline
+\textbf{Statement of Purpose} & To test the product page functionality for viewing product details and adding items to the cart. \\ \hline
+\textbf{Description of Preconditions} & The user navigates to a specific product page. \\ \hline
+\textbf{Inputs} & Interaction with product details such as size, color, quantity, and add-to-cart button. \\ \hline
+\textbf{Expected Outputs} & Product details are displayed accurately; successful addition of items to the cart. \\ \hline
+\textbf{Description of Expected Post-conditions} & The user can proceed to the cart with the selected items. \\ \hline
+\textbf{Execution History} & The product page displays accurate product information and handles item addition correctly. \\ \hline
+\end{tabular}
+\end{table}
+
+\paragraph{Set Partitioning}
+
+\subparagraph{SignUpPage:} Here is a table illustrating the test cases for the SignUpPage:
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.2.1 \\ \hline
+\textbf{Statement of Purpose} & To test the signup page functionality with empty any field input scenarios. \\ \hline
+\textbf{Description of Preconditions} & The user is on the signup page. \\ \hline
+\textbf{Inputs} & name: ;email: sami@gmail.com;mobile: 01866362585; password: 123456 \\ \hline
+\textbf{Expected Outputs} & Unsuccessful signup with invalid inputs; \\ \hline
+\textbf{Description of Expected Post-conditions} & Upon unsuccessful signup, the user account is not created. \\ \hline
+\textbf{Execution History} & The signup page handles different input scenarios correctly. \\ \hline
+\end{tabular}
+\end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.2.2 \\ \hline
+\textbf{Statement of Purpose} & To test the signup page functionality with invalid email input scenarios. \\ \hline
+\textbf{Description of Preconditions} & The user is on the signup page. \\ \hline
+\textbf{Inputs} & name:rahman sami ;email: sami;mobile: 01866362585; password: 123456 \\ \hline
+\textbf{Expected Outputs} & Unsuccessful signup with invalid inputs; \\ \hline
+\textbf{Description of Expected Post-conditions} & Upon unsuccessful signup, the user account is not created. \\ \hline
+\textbf{Execution History} & The signup page handles different input scenarios correctly. \\ \hline
+\end{tabular}
+\end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.2.3 \\ \hline
+\textbf{Statement of Purpose} & To test the signup page functionality with different input scenarios. \\ \hline
+\textbf{Description of Preconditions} & The user is on the signup page. \\ \hline
+\textbf{Inputs} & name: md shamsur rahman sami;email: sami@gmail.com;mobile: 01866362585; password: 123456 \\ \hline
+\textbf{Expected Outputs} & Successful signup with valid inputs; appropriate error messages for invalid inputs. \\ \hline
+\textbf{Description of Expected Post-conditions} & Upon successful signup, the user account is created. \\ \hline
+\textbf{Execution History} & The signup page handles different input scenarios correctly. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{LoginPage:} To test the login page functionality with different input scenarios.
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.2.4 \\ \hline
+\textbf{Statement of Purpose} & To test the login page functionality with invalid email input scenarios. \\ \hline
+\textbf{Description of Preconditions} & The user is on the login page. \\ \hline
+\textbf{Inputs} & email: sami;password: 123456 \\ \hline
+\textbf{Expected Outputs} & Unsuccessful login with invalid credentials;  \\ \hline
+\textbf{Description of Expected Post-conditions} & Upon unsuccessful login, the user is not authenticated and redirected to the homepage. \\ \hline
+\textbf{Execution History} & The login page handles different input scenarios correctly. \\ \hline
+\end{tabular}
+\end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.2.5 \\ \hline
+\textbf{Statement of Purpose} & To test the login page functionality with incorrect password input scenarios. \\ \hline
+\textbf{Description of Preconditions} & The user is on the login page. \\ \hline
+\textbf{Inputs} & email: sami@gmail.com;password: 123 \\ \hline
+\textbf{Expected Outputs} & Unsuccessful login with invalid credentials;  \\ \hline
+\textbf{Description of Expected Post-conditions} & Upon successful login, the user is not authenticated and redirected to the homepage. \\ \hline
+\textbf{Execution History} & The login page handles different input scenarios correctly. \\ \hline
+\end{tabular}
+\end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.2.6 \\ \hline
+\textbf{Statement of Purpose} & To test the login page functionality with correct input scenarios. \\ \hline
+\textbf{Description of Preconditions} & The user is on the login page. \\ \hline
+\textbf{Inputs} & email: sami@gmail.com;password: 123456 \\ \hline
+\textbf{Expected Outputs} & Successful login with valid credentials;  \\ \hline
+\textbf{Description of Expected Post-conditions} & Upon successful login, the user is authenticated and redirected to the homepage. \\ \hline
+\textbf{Execution History} & The login page handles different input scenarios correctly. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{HomePage:} To test the functionality of the home page.
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.2.7 \\ \hline
+\textbf{Statement of Purpose} & To test the functionality of the home page. \\ \hline
+\textbf{Description of Preconditions} & The user is logged in and navigated to the home page. \\ \hline
+\textbf{Inputs} & User interactions with various elements on the home page such as navigation links, product categories, and search functionality. \\ \hline
+\textbf{Expected Outputs} & Proper rendering of the home page content, smooth navigation between sections, and accurate display of product listings. \\ \hline
+\textbf{Description of Expected Post-conditions} & The user can browse the home page seamlessly without encountering any errors. \\ \hline
+\textbf{Execution History} & The home page functions as expected during testing, providing a smooth user experience. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{CartPage:} To test the cart page functionality with different scenarios (e.g., adding items, updating quantities, removing items).
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.2.8\\ \hline
+\textbf{Statement of Purpose} & To test the cart page functionality with different scenarios (e.g., adding items, updating quantities, removing items). \\ \hline
+\textbf{Description of Preconditions} & The user has added items to the cart. \\ \hline
+\textbf{Inputs} & Various actions such as adding items, updating quantities, and removing items from the cart. \\ \hline
+\textbf{Expected Outputs} & The cart page should display the updated list of items with correct quantities and prices. \\ \hline
+\textbf{Description of Expected Post-conditions} & The user can proceed to checkout or continue shopping. \\ \hline
+\textbf{Execution History} & The cart page updates correctly based on user actions. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{OrderPage:} To test the order page functionality for placing orders.
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.2.9 \\ \hline
+\textbf{Statement of Purpose} & To test the order page functionality for placing orders. \\ \hline
+\textbf{Description of Preconditions} & The user has items in the cart and is on the order page. \\ \hline
+\textbf{Inputs} & Various actions such as selecting delivery options, entering shipping details, and confirming the order. \\ \hline
+\textbf{Expected Outputs} & Successful order placement with valid inputs; appropriate error messages for invalid inputs. \\ \hline
+\textbf{Description of Expected Post-conditions} & Upon successful order placement, the user receives an order confirmation. \\ \hline
+\textbf{Execution History} & The order page handles different input scenarios correctly. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{PurchasePage:} To test the purchase page functionality for completing transactions.
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.2.10 \\ \hline
+\textbf{Statement of Purpose} & To test the purchase page functionality for completing transactions. \\ \hline
+\textbf{Description of Preconditions} & The user has placed an order and is on the purchase page. \\ \hline
+\textbf{Inputs} & Payment details such as credit card information, billing address, and security code. \\ \hline
+\textbf{Expected Outputs} & Successful transaction completion with valid payment details; appropriate error messages for invalid details. \\ \hline
+\textbf{Description of Expected Post-conditions} & Upon successful transaction, the user receives a payment confirmation. \\ \hline
+\textbf{Execution History} & The purchase page handles different payment scenarios correctly. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{ProfilePage:} To test the profile page functionality for viewing and updating user image.
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.2.11 \\ \hline
+\textbf{Statement of Purpose} & To test the profile page functionality for viewing and updating user image. \\ \hline
+\textbf{Description of Preconditions} & The user is logged in and navigates to the profile page. \\ \hline
+\textbf{Inputs} & User information such as name, email, contact details, and profile picture. \\ \hline
+\textbf{Expected Outputs} & Successful update of user image with valid inputs; appropriate error messages for invalid inputs. \\ \hline
+\textbf{Description of Expected Post-conditions} & The user profile reflects the updated image. \\ \hline
+\textbf{Execution History} & The profile page allows users to view and update their image correctly. \\ \hline
+\end{tabular}
+\end{table}
+
+\subparagraph{ProductPage:} To test the product page functionality for viewing product details and adding items to the cart.
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.1.2.12 \\ \hline
+\textbf{Statement of Purpose} & To test the product page functionality for viewing product details and adding items to the cart. \\ \hline
+\textbf{Description of Preconditions} & The user navigates to a specific product page. \\ \hline
+\textbf{Inputs} & Interaction with product details such as size, color, quantity, and add-to-cart button. \\ \hline
+\textbf{Expected Outputs} & Product details are displayed accurately; successful addition of items to the cart. \\ \hline
+\textbf{Description of Expected Post-conditions} & The user can proceed to the cart with the selected items. \\ \hline
+\textbf{Execution History} & The product page displays accurate product information and handles item addition correctly. \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{White Box Testing}
+\paragraph{Code Coverage}
+\subparagraph{Add Product to Cart} Here is a table illustrating the test cases for the SignUpPage:
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.2.1.2 \\ \hline
+\textbf{Test Case Title} & Add Product to Cart \\ \hline
+\textbf{Test Case Objective} & Verify that users can successfully add products to their shopping cart. \\ \hline
+\textbf{Preconditions} & 
+- The Swapno e-commerce app is opened on a compatible device. 
+- The user is logged in to their account. \\ \hline
+\textbf{Test Steps} & 
+1. Browse the product listings within the Swapno app. 
+2. Select a product of interest by tapping on its listing. 
+3. Click on the "Add to Cart" button or icon associated with the selected product. \\ \hline
+\textbf{Expected Results} & 
+- The selected product should be added to the user's shopping cart. 
+- The cart icon or indicator should display the updated quantity of items. 
+- Users should receive a confirmation message or notification indicating successful addition to the cart. \\ \hline
+\textbf{Test Result} & 
+- The selected product was successfully added to the user's shopping cart. 
+- The cart icon accurately reflected the updated quantity of items. 
+- A confirmation message was displayed, confirming the addition of the product to the cart. \\ \hline
+\textbf{Comments} & 
+This test case ensures that the functionality to add products to the shopping cart works as intended in the Swapno app. It validates a crucial step in the shopping process and ensures a seamless user experience. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+\subparagraph{Retrieve Product Listings} 
+Here is a table illustrating the test cases for the Retrieve Product Listings:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.3.0.1.2 \\ \hline
+\textbf{Test Case Title} & Retrieve Product Listings \\ \hline
+\textbf{Test Case Objective} & Verify that users can successfully retrieve product listings in the Swapno e-commerce app. \\ \hline
+\textbf{Preconditions} & 
+- The Swapno e-commerce app is opened on a compatible device. 
+- The user is logged in to their account. \\ \hline
+\textbf{Test Steps} & 
+1. Navigate to the product listings section within the Swapno app. 
+2. Browse through the available product categories or use the search functionality to find specific products. 
+3. View the details of individual products by tapping on their listings. \\ \hline
+\textbf{Expected Results} & 
+- The product listings should be displayed correctly, showing relevant information such as title, price, and images. 
+- Users should be able to navigate through different product categories and search results smoothly. 
+- Product details should be accurate and up-to-date. \\ \hline
+\textbf{Test Result} & 
+- The product listings were successfully retrieved and displayed in the app. 
+- Navigation between product categories and search results worked smoothly. 
+- Product details were accurate and matched the displayed listings. \\ \hline
+\textbf{Comments} & 
+This test case ensures that users can effectively explore and find products within the Swapno e-commerce app. It validates the functionality related to retrieving and displaying product listings, which is essential for a user-friendly shopping experience. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subparagraph{Place Order} 
+Here is a table illustrating the test cases for the Place Order functionality:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.3.0.1.3 \\ \hline
+\textbf{Test Case Title} & Place Order \\ \hline
+\textbf{Test Case Objective} & Verify that users can successfully place orders for selected products in the Swapno e-commerce app. \\ \hline
+\textbf{Preconditions} & 
+- The Swapno e-commerce app is opened on a compatible device. 
+- The user is logged in to their account. 
+- The user has added products to their shopping cart. \\ \hline
+\textbf{Test Steps} & 
+1. Navigate to the shopping cart section within the Swapno app. 
+2. Review the selected products and their quantities. 
+3. Proceed to checkout and enter the required shipping and payment information. 
+4. Confirm the order details and finalize the purchase. \\ \hline
+\textbf{Expected Results} & 
+- The order should be successfully placed, and the user should receive an order confirmation. 
+- The selected products should be removed from the shopping cart. 
+- The user's account should reflect the placed order and updated order history. \\ \hline
+\textbf{Test Result} & 
+- The order was successfully placed, and an order confirmation was received. 
+- The selected products were removed from the shopping cart. 
+- The user's account accurately reflected the placed order in the order history. \\ \hline
+\textbf{Comments} & 
+This test case ensures that users can seamlessly complete the checkout process and place orders for selected products. It validates the functionality related to order placement, which is a critical aspect of the e-commerce platform's functionality. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subparagraph{View Order History} 
+Here is a table illustrating the test cases for the View Order History functionality:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.3.0.1.4 \\ \hline
+\textbf{Test Case Title} & View Order History \\ \hline
+\textbf{Test Case Objective} & Verify that users can view their order history in the Swapno e-commerce app. \\ \hline
+\textbf{Preconditions} & 
+- The Swapno e-commerce app is opened on a compatible device. 
+- The user is logged in to their account. \\ \hline
+\textbf{Test Steps} & 
+1. Navigate to the order history section within the Swapno app. 
+2. View the list of past orders made by the user. 
+3. Select a specific order to view its details. \\ \hline
+\textbf{Expected Results} & 
+- The user should be able to see a list of their past orders, including order numbers, dates, and order statuses. 
+- Detailed information about each order, including product details, quantities, and total prices, should be available for viewing. \\ \hline
+\textbf{Test Result} & 
+- The user could view their order history, including all past orders with relevant details. 
+- Detailed information about each order was accessible, allowing the user to review their purchase history. \\ \hline
+\textbf{Comments} & 
+This test case ensures that users have access to their order history within the Swapno e-commerce app. It validates the functionality related to viewing past orders, which is essential for tracking purchases and managing orders effectively. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subparagraph{Update Profile image} 
+Here is a table illustrating the test cases for updating profile image in the Swapno e-commerce app:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.3.0.1.5 \\ \hline
+\textbf{Test Case Title} & Update Profile image \\ \hline
+\textbf{Test Case Objective} & Verify that users can successfully update their profile image in the Swapno e-commerce app. \\ \hline
+\textbf{Preconditions} & 
+- The Swapno e-commerce app is opened on a compatible device. 
+- The user is logged in to their account. \\ \hline
+\textbf{Test Steps} & 
+1. Navigate to the profile section within the Swapno app. 
+2. Access the profile settings or edit image option. 
+3. Update the desired profile image. \\ \hline
+\textbf{Expected Results} & 
+- The user's profile image should be successfully updated with the new changes. 
+- Any modifications made to the profile image should be reflected accurately. \\ \hline
+\textbf{Test Result} & 
+- The user's profile image was successfully updated with the new changes. 
+- All modifications made to the profile were accurately reflected, ensuring that the user's information was up-to-date. \\ \hline
+\textbf{Comments} & 
+This test case ensures that users have the ability to update their profile image within the Swapno e-commerce app. It validates the functionality related to profile management, which is crucial for maintaining accurate user image and preferences. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Branch Coverage}
+\subparagraph{Add Product to Cart} 
+Here is a table illustrating the test cases for the Add Product to Cart functionality with branch coverage:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.2.2.1.2 \\ \hline
+\textbf{Test Case Title} & Add Product to Cart \\ \hline
+\textbf{Test Case Objective} & Verify that users can successfully add products to their shopping cart. \\ \hline
+\textbf{Preconditions} & 
+- The Swapno e-commerce app is opened on a compatible device. 
+- The user is logged in to their account. \\ \hline
+\textbf{Test Steps} & 
+1. Browse the product listings within the Swapno app. 
+2. Select a product of interest by tapping on its listing. 
+3. Click on the "Add to Cart" button or icon associated with the selected product. \\ \hline
+\textbf{Expected Results} & 
+- The selected product should be added to the user's shopping cart. 
+- The cart icon or indicator should display the updated quantity of items. 
+- Users should receive a confirmation message or notification indicating successful addition to the cart. \\ \hline
+\textbf{Test Result} & 
+- The selected product was successfully added to the user's shopping cart. 
+- The cart icon accurately reflected the updated quantity of items. 
+- A confirmation message was displayed, confirming the addition of the product to the cart. \\ \hline
+\textbf{Comments} & 
+This test case ensures that the functionality to add products to the shopping cart works as intended in the Swapno app. It validates a crucial step in the shopping process and ensures a seamless user experience. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\paragraph{Condition Coverage}
+\subparagraph{Retrieve Product Listings} 
+Here is a table illustrating the test cases for the Retrieve Product Listings functionality with condition coverage:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{6.5cm}|p{9cm}|}
+\hline
+\textbf{Test Case Identifier} & 1.3.0.1.2 \\ \hline
+\textbf{Test Case Title} & Retrieve Product Listings \\ \hline
+\textbf{Test Case Objective} & Verify that users can successfully retrieve product listings in the Swapno e-commerce app. \\ \hline
+\textbf{Preconditions} & 
+- The Swapno e-commerce app is opened on a compatible device. 
+- The user is logged in to their account. \\ \hline
+\textbf{Test Steps} & 
+1. Navigate to the product listings section within the Swapno app. 
+2. Browse through the available product categories or use the search functionality to find specific products. 
+3. View the details of individual products by tapping on their listings. \\ \hline
+\textbf{Expected Results} & 
+- The product listings should be displayed correctly, showing relevant information such as title, price, and images. 
+- Users should be able to navigate through different product categories and search results smoothly. 
+- Product details should be accurate and up-to-date. \\ \hline
+\textbf{Test Result} & 
+- The product listings were successfully retrieved and displayed in the app. 
+- Navigation between product categories and search results worked smoothly. 
+- Product details were accurate and matched the displayed listings. \\ \hline
+\textbf{Comments} & 
+This test case ensures that users can effectively explore and find products within the Swapno e-commerce app. It validates the functionality related to retrieving and displaying product listings, which is essential for a user-friendly shopping experience. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\paragraph{Path Coverage for Swapno E-commerce App (Single Vendor)}
+
+Achieving full path coverage for every feature in Swapno an e-commerce application can be very complex. This document outlines potential test cases to illustrate path coverage for some core functionalities in Swapno (single vendor).
+
+\subparagraph{User Login \& Registration}
+
+\begin{enumerate}
+    \item Valid Login (existing user with correct credentials)
+    \item Invalid Login (incorrect username or password)
+    \item New User Registration (successful registration with valid data)
+    \item Incomplete Registration (missing required fields)
+\end{enumerate}
+
+\subparagraph{Browse Products}
+
+\begin{enumerate}
+    \item Successful browsing of product categories (user can navigate and view different categories)
+    \item Search Functionality (user searches for a specific product using keywords and gets relevant results)
+    \item Product Details (user taps on a product listing and sees detailed information)
+    \item Out-of-Stock Product (user tries to view details of an out-of-stock product and sees appropriate message)
+\end{enumerate}
+
+\subparagraph{Add to Cart}
+
+\begin{enumerate}
+    \item Adding In-Stock Product (user adds a product to their cart successfully)
+    \item Adding Multiple Products (user adds several different products to their cart)
+    \item Adding Out-of-Stock Product (user tries to add an out-of-stock product and receives an error message)
+    \item Update Cart Quantity (user increases or decreases the quantity of a product in the cart)
+    \item Remove from Cart (user removes a product from their cart)
+\end{enumerate}
+
+\subparagraph{Checkout Process}
+
+\begin{enumerate}
+    \item Initiate Checkout (user proceeds to checkout from the shopping cart)
+    \item Logged-in User Checkout (user completes checkout with their saved shipping information)
+    \item Payment Processing (user successfully completes payment using a valid payment method)
+    \item Payment Failure (user's payment is declined and receives an error message)
+\end{enumerate}
+
+\subparagraph{Order History}
+
+\begin{enumerate}
+    \item View Order History (logged-in user views a list of their past orders)
+    \item Order Statuses (user can see the current status of their orders - placed, Pending, In Progress, Delivered)
+\end{enumerate}
+
+\subparagraph{Profile Management (Optional)}
+
+\begin{enumerate}
+    \item Update Profile Information (user edits their profile picture)
+    \item Change Profile Picture (user uploads a new profile picture)
+\end{enumerate}
+
+\textbf{Note:} This is not an exhaustive list, and additional test cases can be created based on specific functionalities within the Swapno app.
+
+\subparagraph{Key Considerations for Path Coverage}
+
+\begin{itemize}
+    \item \textbf{Error Handling:} Ensure your test cases explore scenarios that might trigger errors or exceptions in the code (e.g., network errors during checkout).
+    \item \textbf{Negative Testing:} Include test cases that cover invalid inputs and unexpected user actions.
+    \item \textbf{Branching Points:} Identify conditional statements, loops, and function calls in the code and design tests that cover all possible outcomes based on those branches. 
+\end{itemize}
+
+
+
+
+
+\section{Integration Testing}
+At this stage, we conducted meticulous testing of subsystem interfaces and module interactions to identify and localize any errors or issues. Using a top-down approach, we evaluated modules in descending order of hierarchy, following the data flow from higher to lower priority subsystems. This comprehensive methodology ensured a rigorous and professional evaluation process.
+\subsection{Bottom Up Testing}
+
+Not applicable.
+
+\subsection{Top Down Testing}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|p{4cm}|p{6cm}|}
+    \hline
+    \textbf{Test Case Number} & \textbf{Statement of Purpose} & \textbf{Interface(s) Being Tested} \\
+    \hline
+    2.2.1 & Validate the integration between the Product Search Interface and Product Database Interface. & Product Search Interface, Product Database Interface \\
+    2.2.2 & Validate the integration between the Cart Interface and Checkout Interface. & Cart Interface, Checkout Interface \\
+    2.2.3 & Validate the integration between the User Authentication Interface and Profile Management Interface. & User Authentication Interface, Profile Management Interface \\
+    2.2.4 & Validate the integration between the Order History Interface and Payment Interface. & Order History Interface, Payment Interface \\
+    \hline
+    \end{tabular}
+    \label{tab:top-down}
+\end{table}
+\subsubsection{Test case 1}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|p{7cm}|}
+    \hline
+    \textbf{Test Case Number} & 2.2.1 \\
+    \hline
+    \textbf{Statement of Purpose} & Validate the integration between the Product Search Interface and Product Database Interface. \\
+    \hline
+    \textbf{Interface(s) Being Tested} & Product Search Interface, Product Database Interface. \\
+    \hline
+    \textbf{Description of Precondition} & The Product Search Interface and Product Database Interface are integrated and functional. \\
+    \hline
+    \textbf{Test Case Inputs} & 
+    \begin{verbatim}
+    {
+        "keywords": "banana",
+        "category": "Fruits",
+    }
+    \end{verbatim} \\
+    \hline
+    \textbf{Method Stub} & N/A \\
+    \hline
+    \textbf{Expected Output} & A list of available banana in the Fruits category \\
+    \hline
+    \textbf{Description of Expected Post-conditions} & The Product Search Interface successfully retrieves the list of available banana by querying the Product Database Interface. \\
+    \hline
+    \textbf{Execution History} & The \texttt{searchProducts()} method in the Product Search Interface is invoked with the given inputs. The method internally communicates with the Product Database Interface to retrieve the relevant product data by the \texttt{queryProducts} method. The Product Database Interface processes the query and returns the list of available bananas, which is then presented by the Product Search Interface to the user. \\
+    \hline
+    \end{tabular}
+   
+    \label{tab:test-case-2.2.1}
+\end{table}
+
+% Test Case 2.2.2
+\subsubsection{Test case 2}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|p{7cm}|}
+    \hline
+    \textbf{Test Case Number} & 2.2.2 \\
+    \hline
+    \textbf{Statement of Purpose} & Validate the integration between the Cart Interface and Checkout Interface. \\
+    \hline
+    \textbf{Interface(s) Being Tested} & Cart Interface, Checkout Interface. \\
+    \hline
+    \textbf{Description of Precondition} & The Cart Interface and Checkout Interface are integrated and functional. \\
+    \hline
+    \textbf{Test Case Inputs} & N/A \\
+    \hline
+    \textbf{Method Stub} & N/A \\
+    \hline
+    \textbf{Expected Output} & Successful transition from the Cart Interface to the Checkout Interface with the selected products. \\
+    \hline
+    \textbf{Description of Expected Post-conditions} & The Checkout Interface displays the selected products from the Cart Interface and proceeds with the checkout process. \\
+    \hline
+    \textbf{Execution History} & The user selects products in the Cart Interface and initiates the checkout process. The Cart Interface communicates with the Checkout Interface to transfer the selected products. The Checkout Interface displays the selected products and allows the user to proceed with payment. \\
+    \hline
+    \end{tabular}
+    \label{tab:test-case-2.2.2}
+\end{table}
+
+% Test Case 2.2.3
+\subsubsection{Test case 3}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|p{7cm}|}
+    \hline
+    \textbf{Test Case Number} & 2.2.3 \\
+    \hline
+    \textbf{Statement of Purpose} & Validate the integration between the User Authentication Interface and Profile Management Interface. \\
+    \hline
+    \textbf{Interface(s) Being Tested} & User Authentication Interface, Profile Management Interface. \\
+    \hline
+    \textbf{Description of Precondition} & The User Authentication Interface and Profile Management Interface are integrated and functional. \\
+    \hline
+    \textbf{Test Case Inputs} & N/A \\
+    \hline
+    \textbf{Method Stub} & N/A \\
+    \hline
+    \textbf{Expected Output} & Successful user authentication and access to profile management features. \\
+    \hline
+    \textbf{Description of Expected Post-conditions} & The user successfully logs in through the User Authentication Interface and gains access to profile management functionalities. \\
+    \hline
+    \textbf{Execution History} & The user enters login credentials in the User Authentication Interface. The User Authentication Interface verifies the credentials and grants access to the Profile Management Interface upon successful authentication. \\
+    \hline
+    \end{tabular}
+    \label{tab:test-case-2.2.3}
+\end{table}
+
+% Test Case 2.2.4
+\subsubsection{Test case 4}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|p{7cm}|}
+    \hline
+    \textbf{Test Case Number} & 2.2.4 \\
+    \hline
+    \textbf{Statement of Purpose} & Validate the integration between the Order History Interface and Payment Interface. \\
+    \hline
+    \textbf{Interface(s) Being Tested} & Order History Interface, Payment Interface. \\
+    \hline
+    \textbf{Description of Precondition} & The Order History Interface and Payment Interface are integrated and functional. \\
+    \hline
+    \textbf{Test Case Inputs} & N/A \\
+    \hline
+    \textbf{Method Stub} & N/A \\
+    \hline
+    \textbf{Expected Output} & Successful payment processing for an order displayed in the Order History Interface. \\
+    \hline
+    \textbf{Description of Expected Post-conditions} & The payment for the selected order is successfully processed through the Payment Interface. \\
+    \hline
+    \textbf{Execution History} & The user selects an order in the Order History Interface for which payment is pending. The Order History Interface communicates with the Payment Interface to process the payment. Upon successful payment processing, the status of the order is updated in the Order History Interface. \\
+    \hline
+    \end{tabular}
+    \caption{Test Case 2.2.4}
+    \label{tab:test-case-2.2.4}
+\end{table}
+
+\subsection{Sandwich Testing}
+
+Not applicable.
+
+\section{System Testing}
+ System testing is done to monitor how each component of the system is behaving.
+\subsection{ Functional Testing}
+ 
+\end{document}
+
